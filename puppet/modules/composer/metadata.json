@@ -1,0 +1,43 @@
+{
+  "name": "willdurand-composer",
+  "version": "0.0.6",
+  "source": "UNKNOWN",
+  "author": "William Durand",
+  "license": "MIT",
+  "summary": "This module installs Composer, a dependency manager for PHP.",
+  "description": "This module installs Composer, a dependency manager for PHP.",
+  "project_page": "UNKNOWN",
+  "dependencies": [
+    {
+      "name": "maestrodev/wget"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "LICENSE": "8e55fce2ff4cd1331f7c6bc602fe7370",
+    "Modulefile": "18e9f7f0475668df492183cf2aa0d35a",
+    "README.md": "bd086566f845772c926144251c55c20d",
+    "Rakefile": "a1a87b266213b03b33f5e006d4df7925",
+    "manifests/init.pp": "55b84512cbf79fdb3a418d5cf5f422a1",
+    "manifests/params.pp": "b76c6afd5ff070d7b27c13489511a46b",
+    "spec/classes/composer_spec.rb": "508a399efc16fecb0d680cb7de572e0c",
+    "spec/fixtures/manifests/site.pp": "d41d8cd98f00b204e9800998ecf8427e",
+    "spec/fixtures/modules/wget/Gemfile": "b7535c2f94bb78b8f3b21eee7ae79860",
+    "spec/fixtures/modules/wget/Gemfile.lock": "2bbfbceaa08eb04f5c1438bb57e98e95",
+    "spec/fixtures/modules/wget/Modulefile": "bce6202bfa1977d4f1e82c328d4a67cd",
+    "spec/fixtures/modules/wget/README.md": "e970059be156eb3a90c883031febdc89",
+    "spec/fixtures/modules/wget/Rakefile": "c240059ea5af2ab5cb6ec4414319718e",
+    "spec/fixtures/modules/wget/manifests/authfetch.pp": "71a3d8b580b12ffb67e2df89cb3b6a9d",
+    "spec/fixtures/modules/wget/manifests/fetch.pp": "3e7d65a3d52412fccee0d49989615fb5",
+    "spec/fixtures/modules/wget/manifests/init.pp": "582c44cad08f204e424fc361327842b7",
+    "spec/fixtures/modules/wget/spec/classes/init_spec.rb": "154db01e3fff4f58689fc8729ec1a721",
+    "spec/fixtures/modules/wget/spec/defines/authfetch_spec.rb": "b6876f4b3319410f11c11d3a985c210b",
+    "spec/fixtures/modules/wget/spec/defines/fetch_spec.rb": "68133dec0512ea777afa581f763c79a1",
+    "spec/fixtures/modules/wget/spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec/fixtures/modules/wget/spec/spec_helper_system.rb": "deaf51d85121ccd2edd4db144941b2ce",
+    "spec/fixtures/modules/wget/spec/system/wget_system_spec.rb": "13f5696b3b9a9ba89a1c6f0da60e171b",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc"
+  }
+}
