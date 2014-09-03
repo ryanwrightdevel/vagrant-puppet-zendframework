@@ -40,9 +40,9 @@ package{'php5-mysql': ensure=>'present', require=>Class['::mysql::server']}
 package{'php5-gd': ensure=>'present', require=>Package['php5']}
 package{'php5-curl': ensure=>'present', require=>Package['php5']}
 
- mysql::db { 'drupal':
-      user     => 'web',
-      password => 'web',
+ mysql::db { 'zend':
+      user     => 'webdev',
+      password => 'webdev',
       host     => 'localhost',
       grant    => ['ALL'],
       require => Class['::mysql::server']
@@ -69,7 +69,7 @@ class zend{
         require => Exec['git-zend']
    }
    exec{'composer-install-dependencies':
-        command => 'php composer.phar install',
+        command => '/usr/bin/php composer.phar install',
         path => '/usr/bin/',
         cwd => '/var/www/html',
         require => Exec['composer-self-update']
