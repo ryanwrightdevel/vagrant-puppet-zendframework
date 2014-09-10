@@ -8,7 +8,7 @@ class wget (
   $version = present,
 ) {
 
-  if $::operatingsystem != 'Darwin' {
+  if $::kernel == 'Linux' {
     if ! defined(Package['wget']) {
       package { 'wget': ensure => $version }
     }

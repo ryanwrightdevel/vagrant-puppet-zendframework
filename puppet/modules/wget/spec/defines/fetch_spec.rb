@@ -11,14 +11,14 @@ describe 'wget::fetch' do
 
   let(:destination) { "/tmp/dest" }
 
-  context "with default params" do
+  context "with default params", :compile do
     it { should contain_exec('wget-test').with({
       'command' => "wget --no-verbose --output-document='#{destination}' 'http://localhost/source'",
       'environment' => []
     }) }
   end
 
-  context "with user" do
+  context "with user", :compile do
     let(:params) { super().merge({
       :execuser => 'testuser',
     })}
@@ -30,7 +30,7 @@ describe 'wget::fetch' do
     }) }
   end
 
-  context "with authentication" do
+  context "with authentication", :compile do
     let(:params) { super().merge({
       :user => 'myuser',
       :password => 'mypassword'
@@ -45,7 +45,7 @@ describe 'wget::fetch' do
       it { should contain_file("#{destination}.wgetrc").with_content('password=mypassword') }
     end
 
-    context "with user" do
+    context "with user", :compile do
       let(:params) { super().merge({
         :execuser => 'testuser',
       })}
@@ -57,7 +57,7 @@ describe 'wget::fetch' do
       }) }
     end
 
-    context "using proxy" do
+    context "using proxy", :compile do
       let(:facts) { super().merge({
         :http_proxy => 'http://proxy:1000',
         :https_proxy => 'http://proxy:1000'
@@ -71,7 +71,7 @@ describe 'wget::fetch' do
     end
   end
 
-  context "with cache" do
+  context "with cache", :compile do
     let(:params) { super().merge({
       :cache_dir => '/tmp/cache',
       :execuser  => 'testuser',
@@ -89,7 +89,7 @@ describe 'wget::fetch' do
     }) }
   end
 
-  context "with cache file" do
+  context "with cache file", :compile do
     let(:params) { super().merge({
       :cache_dir  => '/tmp/cache',
       :cache_file => 'newsource',
