@@ -1,4 +1,4 @@
-Vagrant Puppet Zendframework
+Vagrant, Puppet, Zend Framework 2
 ============================
 
 Creates a UBUNTU 14.04 LTS virtual machine using VirtualBox, Puppet and Vagrant and automatically installs and configure Zend Framework 2.
