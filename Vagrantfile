@@ -42,6 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   #config.vm.synced_folder "./html", "/vagrant/html", id: "mysite", owner : "www-data", group: "www-data"
   config.vm.synced_folder "./html", "/var/www/html", owner: "www-data", group: "www-data"
+  config.vm.synced_folder "./log", "/var/www/log", owner: "www-data", group: "www-data"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

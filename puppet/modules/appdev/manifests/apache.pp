@@ -1,4 +1,7 @@
-class appdev::apache($web_root = '/var/www/html'){
+class appdev::apache($web_root = '/var/www/html',
+                     $apache_error_log = '/vagrant/log/apache_error.log',
+                     $apache_access_log = '/vagrant/log/apache_access.log'
+                    ){
     #class {'apache':
     #}
     #apache::mod { 'rewrite': }
@@ -18,7 +21,11 @@ class appdev::apache($web_root = '/var/www/html'){
     file{'remove apache index.html':
        ensure => absent,
        path => '/var/www/html/index.html',
-       #require => Class['apache']
+       require => Exec['install apache2']
+    }
+    file{'remove html readme':
+       ensure => absent,
+       path => '/var/www/html/whatisthis-readme',
        require => Exec['install apache2']
     }
 

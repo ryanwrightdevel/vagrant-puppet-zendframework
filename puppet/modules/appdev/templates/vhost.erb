@@ -22,8 +22,10 @@
         Require all granted
         </Directory>
 
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        #ErrorLog ${APACHE_LOG_DIR}/error.log
+        #CustomLog ${APACHE_LOG_DIR}/access.log combined
+        ErrorLog <%= @apache_error_log %>
+        CustomLog <%= @apache_access_log%> combined
 
         # For most configuration files from conf-available/, which are
         # enabled or disabled at a global level, it is possible to
