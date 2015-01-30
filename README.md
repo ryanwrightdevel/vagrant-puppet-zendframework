@@ -21,4 +21,4 @@ Vagrant and VirtualBox must already be installed on your computer
 1. Clone the project using git or download and extract it
 2. cd to the project folder
 3. run the "vagrant up" command in your terminal
-4. navigate to http://192.168.33.13 in your browser
+4. navigate to http://192.168.33.12 in your browser
